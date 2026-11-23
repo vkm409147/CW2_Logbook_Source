@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F4F6FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EVENT MANAGER"
+            android:textColor="#24457A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Manage Events"
+            android:textColor="#172B4D"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Form tạo sự kiện mới -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Create a new event"
+            android:textColor="#172B4D"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event name *"
+            android:inputType="textCapSentences"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location *"
+            android:inputType="textCapSentences" />
+
+        <EditText
+            android:id="@+id/edtDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date (DD/MM/YYYY) *"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time (HH:MM) *"
+            android:inputType="time" />
+
+        <EditText
+            android:id="@+id/edtOrganizer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Organizer *"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Event status" />
+
+        <Spinner
+            android:id="@+id/spEventStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact email (optional)"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact phone (optional)"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/edtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description (optional)"
+            android:gravity="top"
+            android:minLines="2"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Save Event" />
+
+        <Button
+            android:id="@+id/btnCancelEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel Edit"
+            android:visibility="gone" />
+
+        <!-- Khu vực tìm kiếm (Search Section) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Search Events"
+            android:textColor="#172B4D"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/edtSearchKeyword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search by name or desc..."
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnResetSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Danh sách sự kiện đã lưu -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Saved Events"
+            android:textColor="#172B4D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/eventsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>
